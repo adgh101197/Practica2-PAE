@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/assets/styles/styles.css">
+</head>
+<body>
+    <header id="header"></header>
+    <div class="container">
+        <div class="topnav ALIN">
+            <h1>NOTICIAS:</h1>
+<!--
+            <input type="text" placeholder="Noticias.." id="barra">
+            <button onclick="click()">Buscar:</button>
+!-->
+            <p>Buscar en la barra después del /</p>
+        </div>
+        <div class="grid clearfix" id="grid">
+        {{#each noticias}}
+            <div class="col-3 tb-col-4 mb-col-6 ALIN">
+                <h3>{{title}}</h3>
+                <img src="{{urlToImage}}" />
+                <p>{{description}}</p>
+                <a href="{{url}}" target="_blank">Ver más...</a>
+            </div>
+        {{/each}}
+        </div>
+        
+    </div>
+        <footer>&copy; ITESO</footer>
+    </div>
+    <script  src="/app.js"></script>
+</body>
+</html>

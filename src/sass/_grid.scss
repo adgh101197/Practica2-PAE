@@ -1,0 +1,162 @@
+$tablet-size: 500px;
+$desktop-size: 1000px;
+$desktop-color: #81CBFE;
+$tablet-color: #B3BAFE;
+$mobile-color: #12DDD3;
+
+@mixin tablet{
+    @media screen and (min-width: $tablet-size) {
+        @content;
+    }
+}
+
+@mixin mobile{
+    @media screen and (max-width: $tablet-size){
+        @content;
+    }
+}
+
+@mixin desktop{
+    @media screen and (min-width: $desktop-size){
+        @content;
+    }
+}
+
+@include tablet {
+  .grid {
+    > .tb-col-12 {
+        float: left;
+        width: 100%;
+        background-color: $tablet-color;
+      }
+      
+    > .tb-col-8 {
+        float: left;
+        width: calc(100%/12*8);
+        background-color: $tablet-color;
+      }
+      
+    > .tb-col-6 {
+        float: left;
+        width: calc(100%/2);
+        background-color: $tablet-color;
+      }
+      
+    > .tb-col-4 {
+        float: left;
+        width: calc(100%/12*4);
+        background-color: $tablet-color;
+      }
+      
+    > .tb-col-3 {
+        float: left;
+        width: calc(100%/12*3);
+        background-color: $tablet-color;
+      }
+      
+    > .tb-col-2 {
+        float: left;
+        width: calc(100%/12*2);
+        background-color: $tablet-color;
+      }
+      
+    > .tb-col-1 {
+        float: left;
+        width: calc(100%/12);
+        background-color: $tablet-color;
+      }  
+  }
+}
+
+@include mobile {
+  .grid {
+    > .mb-col-12 {
+        float: left;
+        width: 100%;
+        background-color: $mobile-color;
+      }
+      
+    > .mb-col-8 {
+        float: left;
+        width: calc(100%/12*8);
+        background-color: $mobile-color;
+      }
+      
+    > .mb-col-6 {
+        float: left;
+        width: calc(100%/2);
+        background-color: $mobile-color;
+      }
+      
+    > .mb-col-4 {
+        float: left;
+        width: calc(100%/12*4);
+        background-color: $mobile-color;
+      }
+      
+    > .mb-col-3 {
+        float: left;
+        width: calc(100%/12*3);
+        background-color: $mobile-color;
+      }
+      
+    > .mb-col-2 {
+        float: left;
+        width: calc(100%/12*2);
+        background-color: $mobile-color;
+      }
+      
+    > .mb-col-1 {
+        float: left;
+        width: calc(100%/12);
+        background-color: $mobile-color;
+      }  
+  }
+}
+
+@include desktop {
+  .grid {
+    > .col-12 {
+        float: left;
+        width: 100%;
+        background-color: $desktop-color;
+      }
+      
+    > .col-8 {
+        float: left;
+        width: calc(100%/12*8);
+        background-color: $desktop-color;
+      }
+      
+    > .col-6 {
+        float: left;
+        width: calc(100%/2);
+        background-color: $desktop-color;
+      }
+      
+    > .col-4 {
+        float: left;
+        width: calc(100%/12*4);
+        background-color: $desktop-color;
+      }
+      
+    > .col-3 {
+        float: left;
+        width: calc(100%/12*3);
+        height: 600px;
+        background-color: $desktop-color;
+      }
+      
+    > .col-2 {
+        float: left;
+        width: calc(100%/12*2);
+        background-color: $desktop-color;
+      }
+      
+    > .col-1 {
+        float: left;
+        width: calc(100%/12);
+        background-color: $desktop-color;
+      }  
+  }
+}
